@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El copietas</title>
+    <link rel="stylesheet" href="explora.css">
+</head>
+
+<body>
+    <header>
+    <h1>El Ninja que copia</h1>
+    <p>Explora mis pasatiempos favoritos</p>
+    </header>
+    
+    <section class="filters">
+      <button data-filter="all">todos</button>
+      <button data-filter="pezlushi">pezlushi 🐟</button>
+      <button data-filter="programacion">programación 💻</button>
+      <button data-filter="pancito">pancito 🍞</button>
+      <button data-filter="gaming">gaming 🎮</button>
+    </section>
+
+    <section class="hero">
+        <h2>Mis hobbies</h2>
+        <p>Estos son algunos de mis pasatiempos favoritos:</p>
+    </section>
+    <!-- Pics                    -->
+     
+    <section id="Mis_hobbies">
+        <main>    
+            <div class="gallery">
+                <div class="item" data-filter="pezlushi">
+                    <img src="https://www.healthy-pet.com/cdn/shop/articles/home-yourpets-hamster_1200x630.jpg?v=1564696396" width="200" height="200" alt="pezlushi">
+                    <img src="data:image/jpeg;base64,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" width="200" height="200" alt="pezlushi">
+                    <img src="Puntero/ham460.png" width="200" height="200" alt="pezlushi">
+                </div>
+                <div class="item" data-filter="programacion">
+                    <img src="https://cdn-images-1.medium.com/max/1100/1*KFsOaWAZLLulhR7H1pJxjQ.jpeg" width="200" height="200" alt="programación">
+                </div>
+                <div class="item" data-filter="pancito">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD1-a160slZqvWSwYCUK7Tzi5ncUTrnNe3Ug&s" width="200" height="200" alt="pancito">
+                </div>
+                <div class="item" data-filter="gaming">
+                    <img src="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2024/02/mario_world_1-1.jpg" width="200" height="200" alt="gaming">    
+            </div>
+        </main>
+    </section>
+
+    <aside>Contenido lateral</aside>
+    <footer>Raccacoonie´s production</footer>
+
+</body>
+    <script src="JavaTheHub.js"></script>
+
+</html>

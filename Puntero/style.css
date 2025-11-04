@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  body {
+    display: flexbox;
+    flex-direction: column;
+  }
+
+  header {
+    order: 1; /* si estás usando flexbox */
+    text-align: center;
+  }
+
+  aside {
+    order: 3; /* si estás usando flexbox */
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#4a90e2, #85c1f9);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}

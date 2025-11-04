@@ -1,0 +1,125 @@
+:root {
+  --sidebar-width: 200px;
+  --gap: 1rem;
+  --color-primary: #4a90e2;
+  --color-light: #f8f8f8;
+  --text-dark: #222;
+}
+
+/* Layout base con flexbox */
+body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: var(--text-dark);
+}
+
+  /* Media query para móvil */
+  @media (max-width: 768px) {
+    body {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      color: var(--text-dark);
+    }
+  }
+
+/* Header */
+header {
+  flex-wrap: header;
+  display: flexbox;
+  place-items: center;
+  background: linear-gradient(#4a90e2, #85c1f9);
+  padding: 2rem;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  text-shadow: 0 0.1em 0.1em #000;
+  color: rgb(255, 255, 255);
+}
+
+/* Sidebar de filtros */
+.filters {
+  position: fixed;
+  top: 170px;              
+  left: 0;
+  width: 200px;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Botones dentro del sidebar */
+.filters button {
+  padding: 8px 12px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.filters button.active {
+  background: #4caf50;
+  color: #fff;
+}
+
+.filters button:hover {
+  background-color: #99bee4;
+}
+
+main {
+  margin-left: 220px;  
+  padding: 1rem;
+  grid-area: main;
+
+  
+  padding: var(--gap);
+  text-align: center;
+}
+
+.hero {
+  margin-top: 20px;
+  text-align: center;
+  color: #333;
+  text-shadow: 0 0 0.1em #000;
+}
+
+h2 {
+  color: blue;
+  text-shadow: 0 0.1em 0.1em #000;
+}
+
+/* Galería */
+.gallery {
+  display: flexbox;
+  float: left;
+  gap: 15px;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background: var(--color-primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}

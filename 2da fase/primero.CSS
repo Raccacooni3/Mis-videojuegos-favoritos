@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #f1f1f1;
+  --font-family: Arial, sans-serif;
+  --font-size: 16px;
+}
+header {
+  background: linear-gradient(#ff7e5f, #feb47b);
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+}
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+li {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 220px;
+  text-align: center;
+}
+li img {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.card {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+/* Seleccionar el elemento y resaltarlo */
+.selected {
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+section {
+  padding: 2rem;
+  margin-top: 4rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+
+#favoriteGame {
+  background: linear-gradient(to right, #16836b9d, #77b350);
+  color: white;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}

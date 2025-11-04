@@ -1,0 +1,14 @@
+ /* Centrar el reloj en pantalla y aplicar estilo */
+    body {
+      font-family: Arial, sans-serif;
+      display: grid;
+      background-color: black;
+      color: white;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .clock {
+      font-size: 4rem;
+    }
