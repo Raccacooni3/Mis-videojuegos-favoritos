@@ -5,7 +5,7 @@
   --font-size: 16px;
 }
 header {
-  background: linear-gradient(#ff7e5f, #feb47b);
+  background: linear-gradient(#dbd5d3, #60cca8);
   padding: 1.5rem;
   color: white;
   text-align: center;
@@ -30,11 +30,14 @@ li {
   background-color: white;
   border-radius: 8px;
   padding: 1rem;
-  width: 220px;
+  width: 200px;
+  height: 350px;
   text-align: center;
 }
 li img {
   max-width: 200px;
+  max-height: 250px;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -47,6 +50,23 @@ li img {
   transform: scale(1.05);
 }
 
+#detailView {
+  display: none;
+} 
+#detailView.active {
+  display: block;
+}
+
+.menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.menu.active {
+  display: block;
+  opacity: 1;
+}
+
 /* Seleccionar el elemento y resaltarlo */
 .selected {
   border: 2px solid var(--primary-color);
@@ -54,15 +74,7 @@ li img {
 }
 
 section {
-  padding: 2rem;
-  margin-top: 4rem;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.hidden {
-  display: none;
+  transition: opacity 0.3s ease;
 }
 
 

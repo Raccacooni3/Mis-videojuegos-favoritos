@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="Primero.CSS" />
-  <script src="Primero.js" defer></script>
+  <link rel="stylesheet" href="primero.css" />
+  <script src="primero.js" defer></script>
   <title>Mis videojuegos favoritos</title>
 </head>
 <body>
@@ -13,67 +13,70 @@
   </header>
   <div class="game-list" id="gameList">
     <p>Estos son algunos de mis videojuegos favoritos:</p>
-    <ul>
-      <li class="card" data-target="pokemon">
-        <h3>Pokemon Heartgold</h3>
+    <div id="cardsView">
+      <ul>
+        <li class="card" data-target="pokemon">
+          <h3>Pokemon Heartgold</h3>
         <!-- Agregar imágenes relacionadas -->
-        <img src="https://m.media-amazon.com/images/M/MV5BMTEwOGQ5M2EtNGU4NS00YjlhLWE5MjAtYmI5ZDU3ZjFhNzM5XkEyXkFqcGc@._V1_.jpg" alt="Pokemon Heartgold" />
-        <img src="https://img.pokemondb.net/logos/lg/heartgold-logo-large.jpg" alt="Pokemon Heartgold Cover Art" />
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/HGSSgameplay.jpg/250px-HGSSgameplay.jpg" alt="Pokemon Heartgold Gameplay" />
-      </li>
-      
-      <li class="card" data-target="mario">
-        <h3>Super Mario Odyssey</h3>
+          <img src="https://m.media-amazon.com/images/M/MV5BMTEwOGQ5M2EtNGU4NS00YjlhLWE5MjAtYmI5ZDU3ZjFhNzM5XkEyXkFqcGc@._V1_.jpg" alt="Pokemon Heartgold" />
+        </li>
+        <li class="card" data-target="mario">
+          <h3>Super Mario Odyssey</h3>
         <!-- Agregar imágenes relacionadas -->
-        <img src="https://i.guim.co.uk/img/media/0a469e561da36ea82171580141dd5ca4d4fd2cac/40_0_1200_720/master/1200.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=98f9c4452c5cee0e216ea7220ab0eecf" alt="Super Mario Odyssey" />
-      </li>
-      
-      <li class="card" data-target="skyrim">
-        <h3>Skyrim</h3>
-        <!-- Agregar imágenes relacionadas -->
-        <img src="https://static.wikia.nocookie.net/elderscrolls/images/c/c5/Skyrim_Cover.png/revision/latest/scale-to-width-down/1200?cb=20160812173034" alt="Skyrim" />
-      </li>
-      
-      <li class="card" data-target="witcher">
-        <h3>The Witcher 3: Wild Hunt</h3>
-        <!-- Agregar imágenes relacionadas -->
-        <img src="https://static.wikia.nocookie.net/witcher/images/c/c8/TheWitcher3BoxArt.png/revision/latest?cb=20150512225156" alt="The Witcher 3: Wild Hunt" />
-      </li>
-      
-      <li class="card" data-target="luigi">
-        <h3>Luigi´s Mansion 3</h3>
-        <!-- Agregar imágenes relacionadas -->
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJu3IqSxPqCEQN2PHovqpy-fY7w7tj3aP-Q&s" alt="Luigi´s Mansion 3" />
-      </li>
-    </ul>
+          <img src="https://i.guim.co.uk/img/media/0a469e561da36ea82171580141dd5ca4d4fd2cac/40_0_1200_720/master/1200.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=98f9c4452c5cee0e216ea7220ab0eecf" alt="Super Mario Odyssey" />
+        </li>
 
+        <li class="card" data-target="skyrim">
+          <h3>Skyrim</h3>
+        <!-- Agregar imágenes relacionadas -->
+          <img src="https://static.wikia.nocookie.net/elderscrolls/images/c/c5/Skyrim_Cover.png/revision/latest/scale-to-width-down/1200?cb=20160812173034" alt="Skyrim" />
+        </li>
+
+        <li class="card" data-target="witcher">
+          <h3>The Witcher 3: Wild Hunt</h3>
+        <!-- Agregar imágenes relacionadas -->
+         <img src="https://static.wikia.nocookie.net/witcher/images/c/c8/TheWitcher3BoxArt.png/revision/latest?cb=20150512225156" alt="The Witcher 3: Wild Hunt" />
+        </li>
+
+        <li class="card" data-target="luigi">
+          <h3>Luigi´s Mansion 3</h3>
+        <!-- Agregar imágenes relacionadas -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCJu3IqSxPqCEQN2PHovqpy-fY7w7tj3aP-Q&s" alt="Luigi´s Mansion 3" />
+        </li>
+      </ul>
+    </div>
     <!-- Secciones de detalles de juegos -->
-     
-    <section class="hidden" id="pokemon">
+    <div id="detailView">
+      <section class="menu" id="pokemon">
+        <button class="backBtn">Volver</button>
         <h2>Detalles de Pokemon Heartgold</h2>
         <p>Descripción, avance, pokemon</p>
       </section>
 
-    <section class="hidden" id="mario">
+      <section class="menu" id="mario">
+        <button class="backBtn">Volver</button>
         <h2>Detalles de Super Mario Odyssey</h2>
         <p>Descripción, avance, personajes</p>
       </section>
 
-    <section class="hidden" id="skyrim">
+      <section class="menu" id="skyrim">
+        <button class="backBtn">Volver</button>
         <h2>Detalles de Skyrim</h2>
         <p>Descripción, avance, personajes</p>
       </section>
 
-    <section class="hidden" id="witcher">
+      <section class="menu" id="witcher">
+        <button class="backBtn">Volver</button>
         <h2>Detalles de The Witcher 3: Wild Hunt</h2>
         <p>Descripción, avance, personajes</p>
       </section>
 
-    <section class="hidden" id="luigi">
+      <section class="menu" id="luigi">
+        <button class="backBtn">Volver</button>
         <h2>Detalles de Luigi´s Mansion 3</h2>
         <p>Descripción, avance, personajes</p>
       </section>
-
+    </div>
     <div id="favoriteGame">
       <p>Mi videojuego favorito es: <span id="topGame">Pokemon Heartgold</span></p>
     </div>

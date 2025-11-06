@@ -1,11 +1,15 @@
 const items = document.querySelectorAll('.card');
+const cardsView = document.getElementById('cardsView');
+const detailView = document.getElementById('detailView');
+const backBtns = document.querySelectorAll('.backBtn');
+
 
 const sonidos = {
-  "Super Mario Odyssey": "D:/Feli/Developer/Lista de sonidos/Sonidos Mario/super-mario-coin-sound.mp3",
-  "Pokemon Heartgold": "D:/Feli/Developer/Lista de sonidos/Pokemon/12_3.mp3",
-  "Skyrim": "D:/Feli/Developer/Lista de sonidos/Skyrim/42dfb7_skyrim_level_up_sound_effect.mp3",
-  "The Witcher 3: Wild Hunt": "D:/Feli/Developer/Lista de sonidos/The Witcher/the-witcher-3-quests-completed-sound.mp3",
-  "Luigi´s Mansion 3": "D:/Feli/Developer/Lista de sonidos/Luigis/luigis-mansion-key.mp3"
+  "Super Mario Odyssey": "Lista de sonidos/Sonidos Mario/super-mario-coin-sound.mp3",
+  "Pokemon Heartgold": "Lista de sonidos/Pokemon/12_3.mp3",
+  "Skyrim": "Lista de sonidos/Skyrim/42dfb7_skyrim_level_up_sound_effect.mp3",
+  "The Witcher 3: Wild Hunt": "Lista de sonidos/The Witcher/the-witcher-3-quests-completed-sound.mp3",
+  "Luigi´s Mansion 3": "Lista de sonidos/Luigis/luigis-mansion-key.mp3"
 };
 
 items.forEach(item => {
@@ -24,20 +28,28 @@ items.forEach(item => {
       const audio = new Audio(sonido);
       audio.play();
     }
+ // Ocultar cards y mostrar detalle
+    cardsView.style.display = 'none';
+    detailView.classList.add('active');
 
-    // 4. Scroll hacia seccion oculta
+    // Ocultar todas las secciones
+    document.querySelectorAll('.menu').forEach(sec => {
+      sec.classList.remove('active');
+    });
+
+    // Mostrar la sección correspondiente
     const targetId = item.dataset.target;
     const section = document.getElementById(targetId);
-    
-    // ocultar todas las secciones primero
-    // Ocultar todas las secciones
-    document.querySelectorAll('.section').forEach(sec => {
-      sec.classList.add('hidden');
-  });
-    // mostrar la sección objetivo
     if (section) {
-      section.classList.remove('hidden'); 
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.classList.add('active');
     }
+  });
+});
+
+// Botones volver
+backBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    detailView.classList.remove('active');
+    cardsView.style.display = 'block';
   });
 });
