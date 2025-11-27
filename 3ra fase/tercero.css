@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #081b44;
+    --secondary-color: #2ecc71;
+    --text-color: #333333;
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+    
+}
+
+header {
+    background: linear-gradient(#2980b9, #2cb163);
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+body {
+    background-color: white;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border : 2px solid var(--secondary-color);
+    padding: 1rem;
+    width: 200px;
+    height: 350px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    opacity: 0.9;
+    
+    
+}
+li.card img {
+    max-width: 200px;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    opacity: 1;
+}
+input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+input[type="text"]:hover {
+    border: 2px solid var(--primary-color); 
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#detailView {
+    display: none;
+}
+#detailView.active {
+    display: block;
+}
+
+.menu {
+    display: none;}
+
+.menu.active {
+    display: block;
+    opacity: 1;
+}
+/* select and highlight a list item */
+.selected {
+    border: 3px solid var(--primary-color);
+}
+
+section {
+    transition: opacity 0.3s ease;
+}
+.checklist.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.checklist.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
